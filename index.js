@@ -9,11 +9,11 @@ const config     = require('./config/config');
 const routes     = require('./config/routes');
 const dest       = `${__dirname}/public`;
 
-mongoose.Promise = global.Promise;
-mongoose.connect(config.db, (err) => {
-  if(err) return console.log(err);
-  return console.log('connected to CodeFund db');
-});
+// mongoose.Promise = global.Promise;
+// mongoose.connect(config.db, (err) => {
+//   if(err) return console.log(err);
+//   return console.log('connected to CodeFund db');
+// });
 
 if (app.get('env') !== 'production') app.use(cors());
 app.use(morgan('dev'));
